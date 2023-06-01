@@ -82,8 +82,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
 
+	</build>
 	<profiles>
 		<profile>
 			<id>production</id>
@@ -91,15 +91,12 @@
 				<plugins>
 					<plugin>
 						<groupId>com.vaadin</groupId>
-						<artifactId>vaadin-maven-plugin</artifactId>
-						<version>${vaadin.version}</version>
+						<artifactId>flow-maven-plugin</artifactId>
+						<version>24.0.6</version>
 						<executions>
 							<execution>
-								<id>frontend</id>
-								<phase>compile</phase>
 								<goals>
 									<goal>prepare-frontend</goal>
-									<goal>build-frontend</goal>
 								</goals>
 							</execution>
 						</executions>
@@ -108,5 +105,4 @@
 			</build>
 		</profile>
 	</profiles>
-
 </project>
